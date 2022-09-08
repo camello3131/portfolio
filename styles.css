@@ -1,0 +1,223 @@
+:root{
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --main-color: #FBF5F3;
+    --second-color: #7B0828;
+    --main-modal-color: #522B47;
+    --second-modal-color: #7B0828;
+    --container-width: 1200px;
+    --color3: #8DAA9D;
+    --color4: #522B47
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--main-color);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ///////// MENU HAMBURGUESA ////////////  */
+
+.panel{
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0F0E0E;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translate(0, -100%);
+    overflow-y: auto;
+}
+.panel.is-active{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    height: 100%;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.menu a{
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #0F0E0E;
+    transition: all 0.3s ease;
+    z-index: 999;
+    color: var(--main-color);
+}
+
+.menu a:hover{
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: #0F0E0E;
+}
+/* ---------------------------    LOGO  ---------------------------- */
+
+.logo a{
+    height: 80px;
+    position: relative;
+    top: 3%;
+    left: 2.5%;
+    opacity: .8;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.logo a:hover{
+    opacity: 1;
+    transform: rotate(-45deg);
+}
+
+
+/* ---------------------------    social-media ---------------------------- */
+
+.social-media-links{
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    padding: 60px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F0E0E;
+    border-right: #7B0828 5px solid;
+}
+.social-media{
+    color: white;
+    width:  21px;
+    opacity: .6;
+    margin: 8px;
+    transition: all .4s ease;
+}
+.social-media:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+.header-image img{
+    height: 100vh;
+    float: right;
+}
+.header-image{
+    float: right;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    width: 40%;   
+    height: 100vh;
+
+}
+
+.header-content{
+    height: 100vh;
+    width: 100%;
+    float: left;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    color: rgb(31, 28, 28);
+    font-family: raleway;
+    font-weight: 400;
+    letter-spacing: 1px;
+    flex-direction: column;
+    font-size: 50px;
+    z-index: 1;
+}
+.header-content-box{
+    z-index: 2;
+    text-align: center;
+    height: auto;
+    padding-right: 60px;
+    width: auto;
+
+}
+.header-content .firstline{
+    z-index: 2;
+    font-weight:700;
+    font-family: poppins;
+    font-size: 65px;
+}
+.header-content .secondline{
+    z-index: 2;
+    font-size: 30px;
+    padding-top:20px ;
+    font-weight:500;
+    color: rgba(48, 38, 38, 0.8);
+}
+
+/* ////////////////// dark mode ////////////////// */
+
+.btn-dark{
+    position: fixed;
+    bottom: 10vh;
+    left: 15vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0F0E0E;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    border: 0;
+    font-size: 2rem;
+    border: 1px solid white;
+}
+.btn-dark:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.darkMode{
+    background-color: #0F0E0E;
+    color: var(--main-color);
+}
